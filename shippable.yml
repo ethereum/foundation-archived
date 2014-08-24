@@ -1,0 +1,46 @@
+
+# Build Environment
+build_environment: Ubuntu 14.04
+
+# language setting
+language: node_js
+
+# version numbers, testing against one version of node
+node_js:
+  - 0.11.10
+
+# only build when certain Git branches are updated
+branches:
+  only:
+    - master
+
+# node environment
+env:
+  global:
+    - NODE_ENV=dev
+    - SLACK_ORG=ethereum PROJECT=foundation
+    - secure: icKQ2Qj7xMqS/nPKn0ElgnsokDyMRqVQuBMHK5bwMUYyfLPEPo2p77Z6AsheR0ThXjYv9j2g1We0GR/1cRXhgRBK+QzdjIqdXd3eCX0YgCILape3YlUL9oPj1Mmwnup+/3nXBVXncMkhQxhaSBdQjawoHkUqg29DVUwu50ZovG7KX5JT8SYIVxlop6ZYAlbrCDL6vYK5yy22+edmD9Rfj3vsm+O0ALkrtWdkxQD6OU21jt2zITr5Jt5K8tN8ajpriyDOf6UvbNp3v0QFG86aIXSrIsnt1aE8lwmPmJusj/ZE21IqAm8YE0AwblD5wv/w7Tv+R9rAKup4GjuhJHKg9g==
+
+# npm install runs by default, but we need to specify global installs ourselves
+before_install:
+ - npm install -g gulp bower grunt-cli aperture
+
+# the build scripts
+script:
+ # - bower --allow-root install 
+ - gulp build
+ - gulp shippable
+
+after_failure:
+  - python slack_notifier.py --project $PROJECT --org $SLACK_ORG --token $SLACK_TOKEN
+after_success:
+  - python slack_notifier.py --project $PROJECT --org $SLACK_ORG --token $SLACK_TOKEN -s
+
+# # Notification
+# notifications:
+#   email:
+#     recipients:
+#       - taylor.gerring@ethereum.org
+#     on_success: always
+#     on_failure: change
+
