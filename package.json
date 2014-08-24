@@ -1,7 +1,7 @@
 {
-  "name": "ethereum-www",
-  "version": "1.5.0",
-  "description": "'plexus' design",
+  "name": "ethereum-foundation",
+  "version": "0.1.0",
+  "description": "ethereum.foundation website",
   "author": "ethereum project",
   "devDependencies": {
     "event-stream": "^3.1.4",

@@ -108,6 +108,10 @@ gulp.task('bundle', function () {
     .pipe(gulp.dest('..'));
 });
 
+gulp.task('shippable', function () {
+  return gulp.src(config.basePaths.dest + config.GLOBSTAR)
+    .pipe(gulp.dest('shippable/'));
+});
 
 gulp.task('watch', function() {
   plugins.connect.server({
