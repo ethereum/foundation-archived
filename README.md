@@ -1,3 +1,5 @@
+[![Build Status](https://api.shippable.com/projects/53fa1a8ecd0ccca20614ffb6/badge/master)](https://www.shippable.com/projects/53fa1a8ecd0ccca20614ffb6)
+
 # foundation / master
 
 ## Server setup
