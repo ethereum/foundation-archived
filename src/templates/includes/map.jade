@@ -1,0 +1,25 @@
+section#contact.darken
+    div.container
+        div.row
+            div.full_width.column
+                div.section-title.anim(data-anim="flipInX")
+                    h1 Contact
+                    h3 Excited by the possibilities? Get involved!
+
+        div.row.anim(data-anim="fadeInUp")
+            div.full_width.column
+                form#contact-form(action="sendmail.php", method="post")
+                    input(type="text", name="name", placeholder="Full Name (Required)")
+                    input(type="text", name="email", placeholder="Email (Required)")
+                    textarea(name="message", placeholder="Message (Required)")
+                    input.submit(type="submit", name="submit", value="Send")
+
+    div#address-block
+        address
+            strong Ethereum GmbH <br>
+            span 55 Grienbachstrasse<br>
+            span Zug, Switzerland 6340<br>
+            abbr(title="Phone") P:&nbsp;
+            span (123) 456-7890
+
+    div#map

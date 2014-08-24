@@ -1,0 +1,14 @@
+doctype html
+html
+  block head
+    include header
+
+  body.preload(data-separator="skew", data-mobile-animate="false")
+    block content
+
+    block footer
+      include gmaps.html
+
+      include footer
+
+    include googleanalytics.html
