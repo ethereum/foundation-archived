@@ -1558,6 +1558,9 @@ img{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+#contact .container {
 	text-shadow: 0px 0px 3px #000000;
 }
 
@@ -1622,6 +1625,20 @@ img{
 	color: #1d1d1d;
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
+}
 
 #contact .form-notification{
 	margin-top: 20px;
