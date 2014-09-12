@@ -89,6 +89,9 @@ module.exports = {
     'detectmobilebrowser.js',
     'jquery.mb.YTPlayer.js',
     'background-video.js',
+    'classie.js',
+    'helper.js',
+    'grid3d.js',
     'script.js'
   ],
 

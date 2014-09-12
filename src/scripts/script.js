@@ -386,6 +386,16 @@
 		});
 	}
 	google.maps.event.addDomListener(window, 'load', initialize);
+
+	new grid3D( document.getElementById( 'grid3d' ) );
+
+	$('a.button.button-dark').on('click', function(e){
+		e.preventDefault();
+
+		// $('div.content').addClass('show');
+		// $('.' + $(this).attr('rel')).addClass('show');
+		$('.' + $(this).attr('rel')).trigger('click');
+	});
 })(jQuery);
 
 
