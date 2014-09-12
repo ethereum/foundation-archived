@@ -2359,7 +2359,7 @@ p.dummy-text:nth-child(3) {
 
 .dummy-img {
 	/*height: 400px;*/
-	background-color: #ddd;
+	/*background-color: #ddd;*/
 	margin: 30px auto;
 }
 
@@ -2438,6 +2438,10 @@ p.dummy-text:nth-child(3) {
 
 }
 
+.halfImage {
+	width: 70%;
+	margin: 20px 0px;
+}
 
 /* ==========================================================================
    MEDIA QUERIES
