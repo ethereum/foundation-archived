@@ -177,7 +177,7 @@ img{
 .section-title h1{
 	position: relative;
 	margin-top: 0;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 .section-title h1:after{
 	position: absolute;
